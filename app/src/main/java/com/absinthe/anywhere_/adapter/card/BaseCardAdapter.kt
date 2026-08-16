@@ -29,7 +29,6 @@ import com.absinthe.anywhere_.ui.editor.EXTRA_ENTITY
 import com.absinthe.anywhere_.ui.editor.EditorActivity
 import com.absinthe.anywhere_.ui.editor.impl.SWITCH_OFF
 import com.absinthe.anywhere_.ui.editor.impl.SWITCH_ON
-import com.absinthe.anywhere_.ui.qrcode.QRCodeCollectionActivity
 import com.absinthe.anywhere_.utils.AppUtils.atLeastO
 import com.absinthe.anywhere_.utils.AppUtils.isAppFrozen
 import com.absinthe.anywhere_.utils.ShortcutsUtils
@@ -103,13 +102,11 @@ class BaseCardAdapter(
         val normalView = itemView as CardItemView<NormalItemView>
 
         normalView.content.description.isGone = item.description.isNullOrEmpty()
-        normalView.content.param1.isGone = item.type == AnywhereType.Card.QR_CODE
-          || item.type == AnywhereType.Card.IMAGE
+        normalView.content.param1.isGone = item.type == AnywhereType.Card.IMAGE
           || item.type == AnywhereType.Card.BROADCAST
           || item.type == AnywhereType.Card.WORKFLOW
           || item.type == AnywhereType.Card.ACCESSIBILITY
         normalView.content.param2.isGone = item.type == AnywhereType.Card.URL_SCHEME
-          || item.type == AnywhereType.Card.QR_CODE
           || item.type == AnywhereType.Card.IMAGE
           || item.type == AnywhereType.Card.BROADCAST
           || item.type == AnywhereType.Card.WORKFLOW
@@ -466,6 +463,6 @@ class BaseCardAdapter(
   }
 
   private fun shouldUpdateColorInfo(context: Context, item: AnywhereEntity): Boolean {
-    return context !is QRCodeCollectionActivity && (item.type == AnywhereType.Card.ACTIVITY || item.type == AnywhereType.Card.URL_SCHEME || item.type == AnywhereType.Card.QR_CODE)
+    return item.type == AnywhereType.Card.ACTIVITY || item.type == AnywhereType.Card.URL_SCHEME
   }
 }

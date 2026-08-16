@@ -188,7 +188,6 @@
     <string name="settings_tiles">磁貼</string>
     <string name="settings_tiles_summary">在通知欄快速打開 Anywhere-</string>
     <string name="btn_tile_select">選擇</string>
-    <string name="btn_qr_code_collection">掃碼合集</string>
     <string name="desc_need_root">需要 Root</string>
     <string name="desc_work_at_any_mode">無需權限</string>
     <string name="qr_tip_title">長按以添加 Anywhere- 卡片到主頁</string>
@@ -365,9 +364,6 @@
     <string name="bsd_workflow_delay_time">延時</string>
     <string name="bsd_workflow_btn_add_flow_node">添加 Flow 節點</string>
     <string name="btn_add_accessibility">無障礙</string>
-    <string name="menu_share_to_cloud">分享至雲端</string>
-    <string name="btn_cloud_rules">雲端規則</string>
-    <string name="cloud_rules_email_header">貢獻者：\n卡片描述：\n\n** 請勿修改下方的內容 **\n卡片會在審核後上傳到雲端倉庫</string>
     <string name="bsd_workflow_btn_add_a11y_node">添加無障礙節點</string>
     <string name="settings_shell_off">關閉</string>
     <string name="settings_shell_dialog">對話方塊</string>
@@ -389,7 +385,6 @@
     <string name="settings_card_mode_small">小</string>
     <string name="settings_card_mode_minimum">極小</string>
     <string name="toast_invaild_sid">無效的 SID</string>
-    <string name="cloud_rules_need_root">需要 root</string>
     <string name="settings_deprecated_sc_creating_method_summary">在 Android 8.0 以下默認使用此方法創建快捷方式</string>
     <string name="settings_deprecated_sc_creating_method">使用廢棄的方法創建快捷方式</string>
     <string name="settings_close_after_launch_summary">即用即走，不留痕跡</string>
@@ -407,7 +402,6 @@
     <string name="bsd_text_input_layout_content_helper_text_coord">輸入坐標</string>
     <string name="none">無</string>
     <string name="bsd_exec_with_root">使用 root 執行</string>
-    <string name="btn_third_apps_shortcut">其它程式的快捷方式</string>
     <string name="dialog_title_a11y_announcement_message">Anywhere- 使用無障礙權限來執行一些自動化操作。 Anywhere- 完全開源，並且承諾不會利用無障礙權限損害您的設備，您可以點擊查看源代碼。</string>
   <string name="dialog_title_a11y_announcement">無障礙聲明</string>
   <string name="dialog_deny_button">拒絕</string>

@@ -71,7 +71,7 @@ object UxUtils {
         getAppIcon(context, packageName)
           ?: CardTypeIconGenerator.getAdvancedIcon(context, item.type, size)
       }
-      AnywhereType.Card.ACTIVITY, AnywhereType.Card.QR_CODE -> getAppIcon(context, item.packageName)
+      AnywhereType.Card.ACTIVITY -> getAppIcon(context, item.packageName)
         ?: CardTypeIconGenerator.getAdvancedIcon(context, item.type, size)
       else -> CardTypeIconGenerator.getAdvancedIcon(context, item.type, size)
     }

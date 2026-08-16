@@ -259,13 +259,6 @@
       </intent-filter>
     </activity>
 
-    <!--    QR code collection page    -->
-    <activity
-      android:name=".ui.qrcode.QRCodeCollectionActivity"
-      android:configChanges="orientation"
-      android:exported="false"
-      android:label="@string/btn_qr_code_collection" />
-
     <!--    Lab page    -->
     <activity
       android:name=".ui.settings.LabActivity"
@@ -283,12 +276,6 @@
       android:name=".ui.settings.LogcatActivity"
       android:exported="false"
       android:label="@string/logcat" />
-
-    <!--    Cloud rules page    -->
-    <activity
-      android:name=".ui.cloud.CloudRulesActivity"
-      android:exported="false"
-      android:label="@string/btn_cloud_rules" />
 
     <!--    Editor container    -->
     <activity
@@ -311,10 +298,6 @@
       android:name="com.blankj.utilcode.util.UtilsTransActivity"
       android:exported="false"
       tools:replace="exported" />
-
-    <activity
-      android:name=".ui.shortcuts.ThirdAppsShortcutActivity"
-      android:exported="false" />
 
     <!--    Collector tile service    -->
     <service

@@ -50,7 +50,6 @@ object CardTypeIconGenerator {
       AnywhereType.Card.NOT_CARD -> R.drawable.ic_card_no
       AnywhereType.Card.URL_SCHEME -> R.drawable.ic_url_scheme
       AnywhereType.Card.ACTIVITY -> R.drawable.ic_card_activity
-      AnywhereType.Card.QR_CODE -> R.drawable.ic_qr_code
       AnywhereType.Card.IMAGE -> R.drawable.ic_card_image
       AnywhereType.Card.SHELL -> R.drawable.ic_card_shell
       AnywhereType.Card.SWITCH_SHELL -> R.drawable.ic_card_switch

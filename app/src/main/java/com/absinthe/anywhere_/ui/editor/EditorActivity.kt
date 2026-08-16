@@ -317,9 +317,6 @@ class EditorActivity : BaseActivity<ActivityEditorBinding>() {
             AnywhereApplication.sRepository.update(ae)
             onBackPressed()
           }
-          R.id.share_to_cloud -> {
-            AppUtils.sendEntityToMailBox(this@EditorActivity, entity)
-          }
         }
         bottomDrawerBehavior.state = BottomSheetBehavior.STATE_HIDDEN
         true

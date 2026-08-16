@@ -11,7 +11,6 @@ import com.absinthe.anywhere_.constants.CommandResult
 import com.absinthe.anywhere_.constants.Const
 import com.absinthe.anywhere_.constants.GlobalValues.workingMode
 import com.absinthe.anywhere_.model.ShizukuProcess
-import com.absinthe.anywhere_.model.manager.QRCollection
 import com.absinthe.anywhere_.utils.handler.URLSchemeHandler
 import com.absinthe.anywhere_.utils.manager.ActivityStackManager
 import com.absinthe.anywhere_.utils.manager.ShellManager
@@ -92,13 +91,6 @@ object CommandUtils {
       }
     } else {
       when {
-        newCmd.startsWith(AnywhereType.Prefix.QRCODE_PREFIX) -> {
-          newCmd = newCmd.replace(AnywhereType.Prefix.QRCODE_PREFIX, "")
-          QRCollection.getQREntity(newCmd)?.apply {
-            launch()
-          }
-          result = CommandResult.RESULT_SUCCESS
-        }
         newCmd.startsWith(AnywhereType.Prefix.SHELL_PREFIX) -> {
           newCmd = newCmd.removePrefix(AnywhereType.Prefix.SHELL_PREFIX)
           execAdbCmd(newCmd)

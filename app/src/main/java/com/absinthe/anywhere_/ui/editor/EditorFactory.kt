@@ -10,7 +10,6 @@ object EditorFactory {
         return when (type) {
             AnywhereType.Card.URL_SCHEME -> SchemeEditorFragment()
             AnywhereType.Card.ACTIVITY -> AnywhereEditorFragment()
-            AnywhereType.Card.QR_CODE -> QRCodeEditorFragment()
             AnywhereType.Card.IMAGE -> ImageEditorFragment()
             AnywhereType.Card.SHELL -> ShellEditorFragment()
             AnywhereType.Card.SWITCH_SHELL -> SwitchShellEditorFragment()

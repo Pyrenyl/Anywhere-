@@ -35,30 +35,6 @@ object FabBuilder {
         context.getString(R.string.btn_activity_list)
       )
     )
-    fab.addActionItem(
-      create(
-        context,
-        R.id.fab_qr_code_collection,
-        R.drawable.ic_qr_code,
-        context.getString(R.string.btn_qr_code_collection)
-      )
-    )
-    fab.addActionItem(
-      create(
-        context,
-        R.id.fab_cloud_rules,
-        R.drawable.ic_cloud_backup,
-        context.getString(R.string.btn_cloud_rules)
-      )
-    )
-    fab.addActionItem(
-      create(
-        context,
-        R.id.fab_third_apps_shortcut,
-        R.drawable.ic_add_shortcut,
-        context.getString(R.string.btn_third_apps_shortcut)
-      )
-    )
   }
 
   private fun create(context: Context, id: Int, iconRes: Int, label: String): SpeedDialActionItem {

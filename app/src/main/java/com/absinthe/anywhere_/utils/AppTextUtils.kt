@@ -61,9 +61,6 @@ object AppTextUtils {
           cmd.append(String.format(Const.CMD_OPEN_URL_SCHEME_FORMAT, urlScheme))
         }
       }
-      AnywhereType.Card.QR_CODE -> {
-        cmd.append(AnywhereType.Prefix.QRCODE_PREFIX).append(item.param2)
-      }
       AnywhereType.Card.SHELL -> {
         cmd.append(AnywhereType.Prefix.SHELL_PREFIX).append(item.param1)
       }

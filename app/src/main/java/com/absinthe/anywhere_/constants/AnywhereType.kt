@@ -9,7 +9,6 @@ object AnywhereType {
     const val URL_SCHEME = 0
     const val ACTIVITY = 1
     const val MINI_PROGRAM = 2
-    const val QR_CODE = 3
     const val IMAGE = 4
     const val SHELL = 5
     const val SWITCH_SHELL = 6
@@ -22,7 +21,6 @@ object AnywhereType {
       Pair(URL_SCHEME, "New URL Scheme"),
       Pair(ACTIVITY, "New Activity"),
       Pair(MINI_PROGRAM, "New Mini Program"),
-      Pair(QR_CODE, "New QR Code"),
       Pair(IMAGE, "New Image"),
       Pair(SHELL, "New Shell"),
       Pair(SWITCH_SHELL, "New Switch Shell"),
@@ -36,7 +34,6 @@ object AnywhereType {
       Pair(URL_SCHEME, R.string.btn_url_scheme),
       Pair(ACTIVITY, R.string.btn_activity),
       Pair(MINI_PROGRAM, R.string.btn_add_mini_program),
-      Pair(QR_CODE, R.string.btn_add_qr_code),
       Pair(IMAGE, R.string.btn_add_image),
       Pair(SHELL, R.string.btn_add_shell),
       Pair(SWITCH_SHELL, R.string.btn_add_switch_shell),
@@ -50,7 +47,6 @@ object AnywhereType {
       Pair(URL_SCHEME, R.drawable.ic_url_scheme),
       Pair(ACTIVITY, R.drawable.ic_card_activity),
       Pair(MINI_PROGRAM, R.drawable.ic_card_activity),
-      Pair(QR_CODE, R.drawable.ic_qr_code),
       Pair(IMAGE, R.drawable.ic_card_image),
       Pair(SHELL, R.drawable.ic_card_shell),
       Pair(SWITCH_SHELL, R.drawable.ic_card_switch),
@@ -84,7 +80,6 @@ object AnywhereType {
 
   object Prefix {
     const val IMAGE_PREFIX = "[Image]"
-    const val QRCODE_PREFIX = "[QR_Code]"
     const val DYNAMIC_PARAMS_PREFIX = "[DYNAMIC_PARAMS "
     const val DYNAMIC_PARAMS_PREFIX_FORMAT = "[DYNAMIC_PARAMS %s]"
     const val SHELL_PREFIX = "[ANYWHERE_SHELL]"

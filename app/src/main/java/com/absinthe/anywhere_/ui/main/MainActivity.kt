@@ -50,16 +50,13 @@ import com.absinthe.anywhere_.model.database.PageEntity
 import com.absinthe.anywhere_.services.BackupIntentService
 import com.absinthe.anywhere_.services.overlay.CollectorService
 import com.absinthe.anywhere_.services.overlay.ICollectorService
-import com.absinthe.anywhere_.ui.cloud.CloudRulesActivity
 import com.absinthe.anywhere_.ui.editor.EXTRA_EDIT_MODE
 import com.absinthe.anywhere_.ui.editor.EXTRA_ENTITY
 import com.absinthe.anywhere_.ui.editor.EditorActivity
 import com.absinthe.anywhere_.ui.list.AppListActivity
-import com.absinthe.anywhere_.ui.qrcode.QRCodeCollectionActivity
 import com.absinthe.anywhere_.ui.settings.SettingsActivity
 import com.absinthe.anywhere_.ui.setup.SetupActivity
 import com.absinthe.anywhere_.ui.shortcuts.ShortcutsActivity
-import com.absinthe.anywhere_.ui.shortcuts.ThirdAppsShortcutActivity
 import com.absinthe.anywhere_.utils.*
 import com.absinthe.anywhere_.utils.CipherUtils.decrypt
 import com.absinthe.anywhere_.utils.ClipboardUtil.clearClipboard
@@ -557,18 +554,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 }
               })
             Analytics.trackEvent(EventTag.FAB_COLLECTOR_CLICK)
-          }
-          R.id.fab_qr_code_collection -> {
-            startActivity(Intent(this@MainActivity, QRCodeCollectionActivity::class.java))
-            Analytics.trackEvent(EventTag.FAB_QR_CODE_COLLECTION_CLICK)
-          }
-          R.id.fab_cloud_rules -> {
-            startActivity(Intent(this@MainActivity, CloudRulesActivity::class.java))
-            Analytics.trackEvent(EventTag.FAB_CLOUD_RULES_CLICK)
-          }
-          R.id.fab_third_apps_shortcut -> {
-            startActivity(Intent(this@MainActivity, ThirdAppsShortcutActivity::class.java))
-            Analytics.trackEvent(EventTag.FAB_THIRD_APPS_SHORTCUT_CLICK)
           }
           else -> return@setOnActionSelectedListener false
         }

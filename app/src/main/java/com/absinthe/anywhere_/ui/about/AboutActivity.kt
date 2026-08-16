@@ -198,7 +198,6 @@ class AboutActivity : AbsAboutActivity() {
       add(License("Android Jetpack", "Google", License.APACHE_2, "https://source.google.com"))
       add(License("Palette", "Google", License.APACHE_2, "https://source.google.com"))
       add(License("OkHttp", "Square", License.APACHE_2, "https://github.com/square/okhttp"))
-      add(License("Retrofit", "Square", License.APACHE_2, "https://github.com/square/retrofit"))
       add(License("LeakCanary", "Square", License.APACHE_2, "https://github.com/square/leakcanary"))
       add(
         License(

@@ -69,7 +69,7 @@ data class AnywhereEntity(
   val packageName: String
     get() = when (type) {
       AnywhereType.Card.URL_SCHEME -> param2.orEmpty()
-      AnywhereType.Card.ACTIVITY, AnywhereType.Card.QR_CODE -> param1
+      AnywhereType.Card.ACTIVITY -> param1
       else -> ""
     }
 
