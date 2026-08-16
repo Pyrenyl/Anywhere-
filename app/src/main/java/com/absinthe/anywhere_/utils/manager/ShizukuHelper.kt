@@ -7,6 +7,7 @@ import androidx.core.app.ActivityCompat.shouldShowRequestPermissionRationale
 import androidx.core.content.ContextCompat.checkSelfPermission
 import com.absinthe.anywhere_.R
 import com.absinthe.anywhere_.constants.Const
+import com.absinthe.anywhere_.model.ShizukuProcess
 import com.absinthe.anywhere_.utils.ToastUtil
 import com.absinthe.anywhere_.utils.handler.URLSchemeHandler
 import com.absinthe.anywhere_.utils.manager.DialogManager.showGotoShizukuManagerDialog
@@ -32,6 +33,7 @@ object ShizukuHelper {
         // Sui and Shizuku >= 11 use self-implemented permission
         when {
           Shizuku.checkSelfPermission() == PERMISSION_GRANTED -> {
+            ShizukuProcess.connect()
             true
           }
           Shizuku.shouldShowRequestPermissionRationale() -> {

@@ -42,12 +42,12 @@ class CoreProvider : ContentProvider() {
     return if (code == CODE_AE_DIR || code == CODE_AE_ITEM) {
       val context = context ?: return null
       val aeDao: AnywhereDao = AnywhereRoomDatabase.getDatabase(context).anywhereDao()
-      val cursor: Cursor? = if (code == CODE_AE_DIR) {
+      val cursor = if (code == CODE_AE_DIR) {
         aeDao.selectAll()
       } else {
         aeDao.selectById(ContentUris.parseId(uri))
       }
-      cursor?.setNotificationUri(context.contentResolver, uri)
+      cursor.setNotificationUri(context.contentResolver, uri)
       cursor
     } else {
       throw IllegalArgumentException("Unknown URI: $uri")

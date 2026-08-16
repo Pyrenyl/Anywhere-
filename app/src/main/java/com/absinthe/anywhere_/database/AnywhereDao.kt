@@ -45,10 +45,10 @@ interface AnywhereDao {
   fun getEntityById(id: String): AnywhereEntity?
 
   @Query("SELECT * FROM anywhere_table")
-  fun selectAll(): Cursor?
+  fun selectAll(): Cursor
 
   @Query("SELECT * FROM anywhere_table WHERE _id LIKE :id")
-  fun selectById(id: Long): Cursor?
+  fun selectById(id: Long): Cursor
 
   @Insert(onConflict = OnConflictStrategy.REPLACE)
   suspend fun insertPage(pe: PageEntity)

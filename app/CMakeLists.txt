@@ -1,23 +1,9 @@
-    # Sets the minimum version of CMake required to build your native library.
-    # This ensures that a certain set of CMake features is available to
-    # your build.
+cmake_minimum_required(VERSION 3.22.1)
+project(Anywhere LANGUAGES CXX)
 
-    cmake_minimum_required(VERSION 3.4.1)
-
-    # Specifies a library name, specifies whether the library is STATIC or
-    # SHARED, and provides relative paths to the source code. You can
-    # define multiple libraries by adding multiple add_library() commands,
-    # and CMake builds them for you. When you build your app, Gradle
-    # automatically packages shared libraries with your APK.
-
-    add_library( # Specifies the name of the library.
-                 izuko
-
-                 # Sets the library as a shared library.
-                 SHARED
-
-                 # Provides a relative path to your source file(s).
-            src/main/cpp/izuko.cpp)
-
-    # Specifies a path to native header files.
-    include_directories(src/main/cpp/include/)
+add_library(izuko SHARED src/main/cpp/izuko.cpp)
+target_include_directories(izuko PRIVATE src/main/cpp/include)
+target_link_options(izuko PRIVATE
+  "-Wl,-z,max-page-size=16384"
+  "-Wl,-z,common-page-size=16384"
+)

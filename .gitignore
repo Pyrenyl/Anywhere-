@@ -16,6 +16,7 @@ out/
 # Gradle files
 .gradle/
 build/
+gradle/gradle-daemon-jvm.properties
 
 # CMake
 app/.cxx

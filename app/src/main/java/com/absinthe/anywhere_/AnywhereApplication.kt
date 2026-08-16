@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import cn.vove7.andro_accessibility_api.AccessibilityApi
 import com.absinthe.anywhere_.database.AnywhereRepository
 import com.absinthe.anywhere_.model.Settings
+import com.absinthe.anywhere_.model.ShizukuProcess
 import com.absinthe.anywhere_.services.IzukoService
 import com.absinthe.anywhere_.utils.manager.IzukoHelper.checkSignature
 import com.absinthe.anywhere_.utils.manager.PoliceMan
@@ -48,6 +49,7 @@ class AnywhereApplication : Application() {
     Settings.init()
     Utility.init(this)
     Sui.init(BuildConfig.APPLICATION_ID)
+    ShizukuProcess.start()
     AppCompatDelegate.setDefaultNightMode(Settings.getTheme())
     Global.start()
     sRepository = AnywhereRepository(this)
