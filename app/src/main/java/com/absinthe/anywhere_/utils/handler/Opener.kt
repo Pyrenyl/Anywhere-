@@ -56,9 +56,9 @@ private const val TYPE_NONE = -1
 private const val TYPE_ENTITY = 0
 private const val TYPE_CMD = 1
 
-object Opener {
+class Opener private constructor(context: Context) {
 
-  private var context: WeakReference<Context>? = null
+  private val context = WeakReference(context)
   private var listener: OnOpenListener? = null
   private var item: AnywhereEntity? = null
   private var command: String? = null
@@ -66,15 +66,8 @@ object Opener {
   private var extraItem: ExtraBean.ExtraItem? = null
   private var extraItems: Array<ExtraBean.ExtraItem>? = null
 
-  fun with(context: Context): Opener {
-    this.context = WeakReference(context)
-    type = TYPE_NONE
-    item = null
-    command = null
-    listener = null
-    extraItem = null
-    extraItems = null
-    return this
+  companion object {
+    fun with(context: Context) = Opener(context)
   }
 
   fun load(item: AnywhereEntity): Opener {
@@ -106,7 +99,7 @@ object Opener {
 
   @Throws(NullPointerException::class)
   fun open() {
-    context?.get()?.let {
+    context.get()?.let {
       when (type) {
         TYPE_CMD -> {
           openFromCommand(it)
@@ -127,7 +120,7 @@ object Opener {
 
   @Throws(NullPointerException::class)
   fun openWithPackageName(packageName: String) {
-    context?.get()?.let {
+    context.get()?.let {
       openByCommand(it, command ?: throw NullPointerException("null package name."), packageName)
     } ?: let {
       throw NullPointerException("Got a null context instance from Opener.")
