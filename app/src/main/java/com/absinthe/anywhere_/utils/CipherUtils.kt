@@ -2,19 +2,16 @@ package com.absinthe.anywhere_.utils
 
 import android.text.TextUtils
 import android.util.Base64
-import androidx.annotation.Keep
-import com.absinthe.anywhere_.utils.manager.IzukoHelper.cipherKey
 import timber.log.Timber
 import java.nio.charset.StandardCharsets
 import javax.crypto.Cipher
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
 
-@Keep
 object CipherUtils {
 
   private const val CipherMode = "AES/CFB/NoPadding" //Use CFB to encrypt, IV is need
-  private val KEY = cipherKey
+  private const val KEY = "absintheeeeeeeeeeeeeeeeeeeeeeeee"
 
   private fun generateKey(): SecretKeySpec {
     val data: ByteArray = KEY.toByteArray(StandardCharsets.UTF_8)
@@ -27,7 +24,6 @@ object CipherUtils {
    * @param data Source string
    * @return Encrypted string
    */
-  @JvmStatic //For JNI
   fun encrypt(data: String): String? {
     return if (TextUtils.isEmpty(data)) {
       null
@@ -48,7 +44,6 @@ object CipherUtils {
    * @param data Encrypted string
    * @return Decrypted string
    */
-  @JvmStatic //For JNI
   fun decrypt(data: String): String? {
     return try {
       val encrypted = Base64.decode(data.toByteArray(), Base64.DEFAULT)

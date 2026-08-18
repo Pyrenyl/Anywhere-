@@ -11,7 +11,6 @@ val verCode = 2050500
 android {
   namespace = "com.absinthe.anywhere_"
   compileSdk = 37
-  ndkVersion = "28.2.13676358"
 
   defaultConfig {
     applicationId = "com.absinthe.anywhere_"
@@ -72,12 +71,6 @@ android {
   }
 
   dependenciesInfo.includeInApk = false
-
-  externalNativeBuild {
-    cmake {
-      path = file("CMakeLists.txt")
-    }
-  }
 
   packaging {
     resources {
