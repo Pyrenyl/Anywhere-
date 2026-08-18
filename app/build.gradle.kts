@@ -7,6 +7,10 @@ plugins {
 
 val verName = "2.5.5"
 val verCode = 2050500
+val cfgReleaseStoreFile = providers.environmentVariable("RELEASE_STORE_FILE").orNull
+val cfgReleaseStorePassword = providers.environmentVariable("RELEASE_STORE_PASSWORD").orNull
+val cfgReleaseKeyAlias = providers.environmentVariable("RELEASE_KEY_ALIAS").orNull
+val cfgReleaseKeyPassword = providers.environmentVariable("RELEASE_KEY_PASSWORD").orNull
 
 android {
   namespace = "com.absinthe.anywhere_"
@@ -41,6 +45,17 @@ android {
     localeFilters += listOf("en", "zh-rCN", "zh-rTW", "zh-rHK")
   }
 
+  signingConfigs {
+    if (cfgReleaseStoreFile != null) {
+      create("release") {
+        storeFile = file(cfgReleaseStoreFile)
+        storePassword = cfgReleaseStorePassword
+        keyAlias = cfgReleaseKeyAlias
+        keyPassword = cfgReleaseKeyPassword
+      }
+    }
+  }
+
   buildTypes {
     debug {
       applicationIdSuffix = ".debug"
@@ -50,6 +65,7 @@ android {
     release {
       isMinifyEnabled = true
       isShrinkResources = true
+      signingConfigs.findByName("release")?.let { signingConfig = it }
       proguardFiles(
         getDefaultProguardFile("proguard-android-optimize.txt"),
         "proguard-rules.pro"
