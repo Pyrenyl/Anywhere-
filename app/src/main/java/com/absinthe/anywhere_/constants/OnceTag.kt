@@ -6,7 +6,6 @@ object OnceTag {
   const val QR_COLLECTION_TIP = "qrCollectionTip"
   const val OVERLAY_TIP = "overlayTip"
   const val MMKV_MIGRATE = "mmkvMigrate"
-  const val SHORTCUT_COMM_TIPS = "shortcutCommTips"
   const val CONVERT_TYPE_TO_V2 = "convertTypeToV2"
   const val A11Y_ANNOUNCEMENT = "a11yAnnouncement"
 }

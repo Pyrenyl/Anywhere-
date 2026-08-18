@@ -329,7 +329,6 @@
 
   <string name="dialog_message_shizuku_not_running">Please check whether Shizuku service is running normally</string>
   <string name="dialog_reset_background_confirm_message">Are you sure to reset the background image?</string>
-  <string name="dialog_url_scheme_community">Community</string>
   <string name="dialog_message_perm_not_ever">There still has permissions not granted, are you sure to enter?</string>
   <string name="dialog_message_same_app_name">It seems that there is a similar Anywhere- card, are you sure to add it?</string>
   <string name="dialog_reset_shortcuts_confirm_message">Are you sure to reset all Shortcuts?</string>
@@ -343,7 +342,6 @@
   <string name="dialog_rename_title">Rename</string>
   <string name="dialog_choose_color_title">Choose Color</string>
   <string name="dialog_empty_list">Empty List😮</string>
-  <string name="dialog_shortcut_community_tips">Shortcut Community is a third-party URL Scheme service, and it has no relationship with Anywhere-.</string>
   <string name="dialog_webdav_restore_title">Choose a Backup File</string>
 
   <string name="about_text">Anywhere- is a collection of apps pages.</string>

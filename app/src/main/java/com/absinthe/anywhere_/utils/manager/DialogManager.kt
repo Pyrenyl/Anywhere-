@@ -196,13 +196,6 @@ object DialogManager {
       .show()
   }
 
-  fun showShortcutCommunityTipsDialog(activity: Activity, action: () -> Unit) {
-    AnywhereDialogBuilder(activity)
-      .setMessage(R.string.dialog_shortcut_community_tips)
-      .setPositiveButton(android.R.string.ok) { _, _ -> action() }
-      .show()
-  }
-
   fun showGotoShizukuManagerDialog(activity: Activity, action: () -> Unit) {
     AnywhereDialogBuilder(activity)
       .setTitle(R.string.dialog_permission_title)

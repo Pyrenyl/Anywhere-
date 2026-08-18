@@ -134,7 +134,6 @@
 
   <string name="dialog_message_shizuku_not_running">请检查 Shizuku 是否正常运行</string>
   <string name="dialog_reset_background_confirm_message">确定要重置背景吗？</string>
-  <string name="dialog_url_scheme_community">捷径社区</string>
   <string name="dialog_message_perm_not_ever">尚有未授予的权限，确定要进入吗？</string>
   <string name="dialog_message_same_app_name">似乎有相似的 Anywhere- 卡片，要添加吗？</string>
   <string name="dialog_reset_shortcuts_confirm_message">确定要重置所有 Shortcuts 吗？</string>
@@ -328,7 +327,6 @@
   <string name="settings_card_layout_summary">自由定义卡片布局</string>
   <string name="notification_backup_title">正在备份卡片</string>
   <string name="notification_backup_content">这可能需要一些时间</string>
-  <string name="dialog_shortcut_community_tips">捷径社区是一项第三方 URL Scheme 提供服务，与 Anywhere- 没有任何的关系。</string>
   <string name="btn_add_file">文件</string>
   <string name="btn_add_broadcast">广播</string>
   <string name="bsd_switch_shell_status_on">状态开</string>

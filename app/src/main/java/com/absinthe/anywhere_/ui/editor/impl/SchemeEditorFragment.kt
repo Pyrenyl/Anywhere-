@@ -1,24 +1,17 @@
 package com.absinthe.anywhere_.ui.editor.impl
 
-import android.content.ActivityNotFoundException
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.absinthe.anywhere_.AnywhereApplication
 import com.absinthe.anywhere_.R
 import com.absinthe.anywhere_.constants.GlobalValues
-import com.absinthe.anywhere_.constants.OnceTag
 import com.absinthe.anywhere_.databinding.EditorUrlSchemeBinding
 import com.absinthe.anywhere_.model.database.setExecWithRoot
 import com.absinthe.anywhere_.ui.editor.BaseEditorFragment
 import com.absinthe.anywhere_.utils.AppUtils
 import com.absinthe.anywhere_.utils.ShortcutsUtils
-import com.absinthe.anywhere_.utils.ToastUtil
 import com.absinthe.anywhere_.utils.handler.Opener
-import com.absinthe.anywhere_.utils.handler.URLSchemeHandler
-import com.absinthe.anywhere_.utils.manager.DialogManager
-import com.absinthe.anywhere_.utils.manager.URLManager
-import jonathanfinerty.once.Once
 
 class SchemeEditorFragment : BaseEditorFragment() {
 
@@ -30,16 +23,6 @@ class SchemeEditorFragment : BaseEditorFragment() {
   }
 
   override fun initView() {
-    binding.btnUrlSchemeCommunity.setOnClickListener {
-      if (!Once.beenDone(Once.THIS_APP_INSTALL, OnceTag.SHORTCUT_COMM_TIPS)) {
-        DialogManager.showShortcutCommunityTipsDialog(requireActivity()) {
-          openShortcutCommunity()
-        }
-        Once.markDone(OnceTag.SHORTCUT_COMM_TIPS)
-      } else {
-        openShortcutCommunity()
-      }
-    }
     item.let {
       binding.tietAppName.setText(it.appName)
       binding.tietUrlScheme.setText(it.param1)
@@ -108,18 +91,5 @@ class SchemeEditorFragment : BaseEditorFragment() {
     }
 
     return true
-  }
-
-  private fun openShortcutCommunity() {
-    try {
-      URLSchemeHandler.parse(requireContext(), URLManager.SHORTCUT_COMMUNITY_PAGE)
-    } catch (e: Exception) {
-      e.printStackTrace()
-      if (e is ActivityNotFoundException) {
-        ToastUtil.makeText(R.string.toast_no_react_url)
-      } else if (e is RuntimeException) {
-        ToastUtil.makeText(R.string.toast_runtime_error)
-      }
-    }
   }
 }
